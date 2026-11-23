@@ -10,11 +10,17 @@ const nextConfig: NextConfig = {
   turbopack: {
     rules: {
       "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
+        loaders: ["@tailwindcss/turbopack"]
       },
     },
   },
+  images:{
+    remotePatterns:[
+      {
+        "hostname" : "cdn-icons-gif.flaticon.com"
+      }
+    ]
+  }
 };
 
 export default nextConfig;
